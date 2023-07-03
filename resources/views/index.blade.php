@@ -13,40 +13,39 @@
                     <li>
                         {{$train->Azienda}}
                     </li>
-                    <li>
-                        {{$train->Stazione_di_partenza}}
+                    <li> 
+                        Da: {{$train->Stazione_di_partenza}} a: {{$train->Stazione_di_arrivo}}
                     </li>
                     <li>
-                        {{$train->Stazione_di_arrivo}}
-                    </li>
-                    <li>
+                        Partenza:
                         {{$train->Orario_di_partenza}}
-                    </li>
-                    <li>
+                        / Arrivo:
                         {{$train->Orario_di_arrivo}}
                     </li>
-                    <li>
-                        {{$train->Codice_Treno}}
+                    <li> 
+                        Codice: {{$train->Codice_Treno}}
                     </li>
                     <li>
-                        {{$train->Numero_Carrozze}}
+                        Carrozza: {{$train->Numero_Carrozze}}
                     </li>
                     <li>
+                        Ritardo:
                         @if($train->In_orario)
-                        In orario
-                    @else
-                        In ritardo
-                    @endif
+                            In orario
+                        @else
+                            In ritardo
+                        @endif
                     </li>
                     <li>
+                        Stato:
                         @if($train->Cancellato)
-                        Cancellato
-                    @else
-                        Confermato
-                    @endif
+                            Cancellato
+                        @else
+                            Confermato
+                        @endif
                     </li>
                 </ul>    
             @endforeach
-            </div>
+        </div>
     </body>
 </html>
